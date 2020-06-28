@@ -29,6 +29,8 @@ import javafx.util.Duration;
 
 public class FXMLController implements Initializable {
 
+    //Put your API Key here
+    //Using mine for now...
     final String apiKey = "c360b84a";
 
     @FXML
@@ -95,7 +97,7 @@ public class FXMLController implements Initializable {
 
     public Movie ApiActionCall(String movieTitle) {
         Movie mv = null;
-        String omdbURL = "http://www.omdbapi.com/?t=" + movieTitle.replaceAll(" ", "%20") + "&plot=full&apikey=c360b84a" + "&apikey=" + apiKey + "&";
+        String omdbURL = "http://www.omdbapi.com/?t=" + movieTitle.replaceAll(" ", "%20") + "&plot=full" + "&apikey=" + apiKey + "&";
         System.out.println(omdbURL);
         try {
             ObjectMapper mapper = new ObjectMapper();

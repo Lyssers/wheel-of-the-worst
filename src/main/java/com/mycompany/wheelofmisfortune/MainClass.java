@@ -37,7 +37,7 @@ public class MainClass extends Application {
         scene.getStylesheets().add("/styles/Styles.css");
         stage.setResizable(false);
         
-        stage.setTitle("JavaFX and Maven");
+        stage.setTitle("Wheel Of Misfortune");
         stage.setScene(scene);
         stage.show();
     }

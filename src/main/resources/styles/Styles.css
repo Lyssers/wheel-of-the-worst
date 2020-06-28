@@ -1,0 +1,7 @@
+.root{
+    -fx-background: rgb(77,77,77);
+
+}
+.text{
+    -fx-font-smoothing-type: gray;
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1149.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyssers.wheelofmisfortune.FXMLController">
+    <children>
+        <Button fx:id="button" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="170.0" layoutY="607.0" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="103.0" text="Spin!" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Marlett" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Button>
+        <Label fx:id="movieCount" alignment="CENTER" layoutX="76.0" layoutY="205.0" minHeight="16" minWidth="69" prefHeight="48.0" prefWidth="277.0" text="377 Movies Currently on The Wheel..." textFill="WHITE">
+         <font>
+            <Font name="Lucida Bright Demibold Italic" size="14.0" />
+         </font></Label>
+        <Label fx:id="title" alignment="TOP_CENTER" cacheShape="false" centerShape="false" layoutX="28.0" layoutY="14.0" minHeight="16" minWidth="69" prefHeight="140.0" prefWidth="386.0" scaleShape="false" text="WHEEL" textAlignment="CENTER" textFill="#ffee5d" underline="true" wrapText="true">
+         <font>
+            <Font name="Lucida Bright Demibold" size="73.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" choke="0.17" height="2.0" radius="0.5" width="2.0" />
+         </effect></Label>
+      <AnchorPane fx:id="wheel" layoutX="65.0" layoutY="273.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="316.0">
+         <children>
+            <Circle layoutX="158.0" layoutY="158.0" radius="147.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <fill>
+                  <LinearGradient endX="0.5523809523809524" endY="0.5" proportional="false" startX="1.0" startY="0.5047619047619047">
+                     <stops>
+                        <Stop color="#4ebcaa" />
+                        <Stop color="#b1de85" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Circle>
+            <Line endX="170.0" endY="97.0" layoutX="136.0" layoutY="61.0" startX="-126.0" startY="97.0" />
+            <Line endX="122.0" endY="-141.0" layoutX="36.0" layoutY="151.0" startX="122.0" startY="155.0" />
+            <Line endX="115.0" endY="153.0" layoutX="147.0" layoutY="108.0" startX="-89.0" startY="-54.0" />
+            <Line endX="124.70709228515625" endY="-70.70712280273438" layoutX="138.0" layoutY="124.0" startX="-87.0" startY="140.0" />
+            <Text layoutX="54.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="113.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="192.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="260.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="51.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="115.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="189.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+            <Text layoutX="261.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="movieInfo" centerShape="false" focusTraversable="true" layoutX="429.0" layoutY="14.0" prefHeight="638.0" prefWidth="704.0" scaleShape="false">
+         <children>
+            <Label id="movieTitle" fx:id="movieTitle" layoutX="136.0" layoutY="45.0" minHeight="16" minWidth="69" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="movieRating" fx:id="movieRating" layoutX="136.0" layoutY="75.0" minHeight="16" minWidth="69" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label id="movieYear" fx:id="movieYear" layoutX="136.0" layoutY="109.0" minHeight="16" minWidth="69 " textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label id="imdbURL" fx:id="imdbURL" layoutX="136.0" layoutY="142.0" minHeight="16" minWidth="69 " textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="movieSynopsis" alignment="TOP_LEFT" layoutX="136.0" layoutY="176.0" minHeight="16" minWidth="69" prefHeight="446.0" prefWidth="300.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView id="posterShow" fx:id="posterShow" fitHeight="309.0" fitWidth="238.0" layoutX="449.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect></ImageView>
+            <Label layoutX="29.0" layoutY="74.0" text="IMDB Rating: " textFill="WHITE" />
+            <Label layoutX="28.0" layoutY="108.0" text="Year: " textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="141.0" text="iMDB Link: " textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="176.0" text="Movie Synopsis" textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="44.0" text="Movie Title" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label fx:id="title1" alignment="TOP_CENTER" layoutX="191.0" layoutY="96.0" minHeight="16" minWidth="60.0" prefHeight="48.0" prefWidth="60.0" text="Of" textAlignment="CENTER" textFill="#ffee5d" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="title11" alignment="TOP_CENTER" cacheShape="false" centerShape="false" layoutX="16.0" layoutY="134.0" minHeight="16" minWidth="69" prefHeight="64.0" prefWidth="410.0" scaleShape="false" text="MISFORTUNE" textAlignment="CENTER" textFill="#ffee5d" wrapText="true">
+         <font>
+            <Font name="SansSerif Bold Italic" size="60.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" choke="0.17" height="2.0" radius="0.5" width="2.0" />
+         </effect>
+      </Label>
+        
+    </children>
+</AnchorPane>
